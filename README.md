@@ -1,85 +1,25 @@
-# Payer Policy Intelligence — Reproducible RAG Pipeline
+# PA Intelligence — Backend API
 
-## Final LLM Models Used
+FastAPI wrapper around the full PA extraction pipeline.
 
-| Pipeline Node | Model | Reason |
-|---|---|---|
-| PDF parsing, chunking, normalization, scoring | No LLM | Deterministic Python |
-| Brand detection (manifest mode) | No LLM | Brand from workbook |
-| Brand detection (auto mode) | Alias matching (deterministic) | Regex-based |
-| Evidence extraction & 12-parameter JSON | `llama-3.3-70b-versatile` | Complex policy reasoning |
-| JSON repair (fallback only) | `llama-3.1-8b-instant` | Cheap repair step |
+## Status
+- ✅ Code pushed to GitHub
+- ⏳ Deploy to Render: see one-click button below
 
-## Evaluator Setup (4 Steps)
+## One-Click Deploy to Render
 
-```bash
-# 1. Unzip
-unzip payer-policy-intelligence-submission.zip
-cd payer-policy-intelligence-submission
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Rahul268/pa-intel-api)
 
-# 2. Install dependencies
-pip install -r requirements.txt
+**After clicking:**
+1. Sign in to Render (free account)
+2. Render auto-reads `render.yaml` — everything is pre-configured
+3. Under **Environment Variables** → add `GROQ_API_KEY` = your Groq key
+4. Click **Deploy Web Service**
+5. Your API URL: `https://pa-intel-api.onrender.com`
 
-# 3. Set credentials
-cp .env.template .env
-# Edit .env and set: GROQ_API_KEY=<your_key>
+## Pipeline
+PDF Upload → `parse_pdf` → `chunk_pdf_pages` → `build_index` → `retrieve_evidence` → `reduce_evidence_context` → `extract_row` → `validate_step_counts` → `normalize_row` → `calculate_access_score`
 
-# 4. Run
-python run_pipeline.py --mode manifest
-```
-
-**Output:** `outputs/result.csv`
-
-## Folder Structure
-
-```
-payer-policy-intelligence-submission/
-├── README.md
-├── requirements.txt
-├── .env.template
-├── run_pipeline.py              ← mandatory driver
-├── config/
-│   ├── default.yaml             ← runtime config (paths, models, tuning)
-│   ├── brand_registry.json      ← 79-row manifest + 15-brand keyword registry
-│   ├── parameter_extraction_schema.json  ← 12 parameter extraction rules
-│   └── access_score_config.json ← deterministic scoring rules
-├── data/
-│   ├── business_rules/
-│   │   └── PA_Business_Rules.xlsx
-│   ├── input_pdfs/              ← place evaluation PDFs here
-│   └── adhoc_pdfs/              ← for auto mode
-├── src/                         ← all pipeline source modules
-├── notebooks/
-│   └── pipeline_testing.ipynb   ← step-by-step testing notebook
-├── tests/                       ← unit tests
-├── outputs/                     ← result.csv written here
-├── intermediate_outputs/        ← extraction JSONL + cache
-└── logs/                        ← pipeline.log
-```
-
-## Runtime Modes
-
-| Mode | Command | Description |
-|---|---|---|
-| **manifest** (default) | `python run_pipeline.py` | Process all rows from Submissions tab |
-| **auto** | `python run_pipeline.py --mode auto --input_dir data/adhoc_pdfs` | Scan arbitrary PDFs, detect brands |
-| **both** | `python run_pipeline.py --mode both` | Run both modes |
-
-## Failure Conditions
-
-- Missing `GROQ_API_KEY` → error at startup with clear message
-- Missing PDF from manifest → logged and pipeline exits with list of missing files
-- Groq API error → 3 retries with exponential backoff, then error row written
-- Malformed LLM JSON → automatic 8B repair; if still fails, NA skeleton row written
-
-## Testing
-
-```bash
-# Unit tests (no API key required)
-python tests/test_normalizer.py
-python tests/test_step_logic.py
-python tests/test_scorer.py
-
-# Interactive step-by-step testing
-jupyter notebook notebooks/pipeline_testing.ipynb
-```
+## Endpoints
+- `GET /health` — liveness probe
+- `POST /api/extract` — upload PDF + brand, returns 12 parameters + access score
