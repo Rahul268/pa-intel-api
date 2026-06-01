@@ -1,0 +1,202 @@
+2026-05-31 09:07:15 | INFO     | src.io_utils | Logging initialised → /content/submission-build/logs/pipeline.log
+2026-05-31 09:07:15 | INFO     | src.validator | Startup validation passed.
+2026-05-31 09:07:15 | INFO     | src.pipeline | Brand(s) from manifest for 176207-4867884.pdf: ['TREMFYA']
+2026-05-31 09:07:15 | INFO     | src.pipeline | Brand(s) from manifest for 273941-4788109.pdf: ['STELARA']
+2026-05-31 09:07:15 | INFO     | src.pipeline | Brand(s) from manifest for 282478-5009832.pdf: ['TREMFYA']
+2026-05-31 09:07:15 | INFO     | src.pipeline | Brand(s) from manifest for 324603-4962713.pdf: ['STELARA']
+2026-05-31 09:07:15 | INFO     | src.pipeline | Brand(s) from manifest for 325611-4784675.pdf: ['TREMFYA']
+2026-05-31 09:07:15 | INFO     | src.pipeline | Brand(s) from manifest for 337814-4985370.pdf: ['STELARA', 'TREMFYA']
+2026-05-31 09:07:15 | INFO     | src.pipeline | Brand(s) from manifest for 361486-4654549.pdf: ['TREMFYA']
+2026-05-31 09:07:15 | INFO     | src.pipeline | Brand(s) from manifest for 377585-4984547.pdf: ['STELARA']
+2026-05-31 09:07:15 | INFO     | src.pipeline | Brand(s) from manifest for 56061-4538520.pdf: ['STELARA']
+2026-05-31 09:07:15 | INFO     | src.pipeline | Brand(s) from manifest for 56403-5061730.pdf: ['STELARA']
+2026-05-31 09:07:15 | INFO     | src.pipeline | === MANIFEST MODE: 11 rows total (11 from manifest, 0 auto-detected) ===
+2026-05-31 09:07:19 | INFO     | src.pdf_parser | 176207-4867884.pdf: 5 pages, 13299 chars
+2026-05-31 09:20:54 | INFO     | src.io_utils | Logging initialised → /content/submission-build/logs/pipeline.log
+2026-05-31 09:20:54 | INFO     | src.validator | Startup validation passed.
+2026-05-31 09:20:54 | INFO     | src.pipeline | Brand(s) from manifest for 176207-4867884.pdf: ['TREMFYA']
+2026-05-31 09:20:54 | INFO     | src.pipeline | Brand(s) from manifest for 282478-5009832.pdf: ['TREMFYA']
+2026-05-31 09:20:54 | INFO     | src.pipeline | Brand(s) from manifest for 325611-4784675.pdf: ['TREMFYA']
+2026-05-31 09:20:54 | INFO     | src.pipeline | Brand(s) from manifest for 337814-4985370.pdf: ['STELARA', 'TREMFYA']
+2026-05-31 09:20:54 | INFO     | src.pipeline | Brand(s) from manifest for 361486-4654549.pdf: ['TREMFYA']
+2026-05-31 09:20:54 | INFO     | src.pipeline | === MANIFEST MODE: 6 rows total (6 from manifest, 0 auto-detected) ===
+2026-05-31 09:20:56 | INFO     | src.pdf_parser | 176207-4867884.pdf: 5 pages, 13299 chars
+2026-05-31 09:27:41 | INFO     | src.io_utils | Logging initialised → /content/submission-build/logs/pipeline.log
+2026-05-31 09:27:41 | INFO     | src.validator | Startup validation passed.
+2026-05-31 09:27:42 | INFO     | src.pipeline | Brand(s) from manifest for 176207-4867884.pdf: ['TREMFYA']
+2026-05-31 09:27:42 | INFO     | src.pipeline | Brand(s) from manifest for 282478-5009832.pdf: ['TREMFYA']
+2026-05-31 09:27:42 | INFO     | src.pipeline | Brand(s) from manifest for 325611-4784675.pdf: ['TREMFYA']
+2026-05-31 09:27:42 | INFO     | src.pipeline | Brand(s) from manifest for 337814-4985370.pdf: ['STELARA', 'TREMFYA']
+2026-05-31 09:27:42 | INFO     | src.pipeline | Brand(s) from manifest for 361486-4654549.pdf: ['TREMFYA']
+2026-05-31 09:27:42 | INFO     | src.pipeline | === MANIFEST MODE: 6 rows total (6 from manifest, 0 auto-detected) ===
+2026-05-31 09:27:44 | INFO     | src.pdf_parser | 176207-4867884.pdf: 5 pages, 13299 chars
+2026-05-31 09:27:44 | INFO     | src.pdf_parser | 176207-4867884.pdf: extracted 7 H1 headings (body_size=9.6, h1_threshold=12.0)
+2026-05-31 09:27:44 | INFO     | src.pipeline | Processing: 176207-4867884.pdf | TREMFYA
+2026-05-31 09:27:44 | INFO     | src.retrieval | Retrieval: brand=TREMFYA | chunks=44 | large=False | top_k=10/5
+2026-05-31 09:27:44 | INFO     | src.retrieval | Manual anchor: page 1 (kw: 'guselkumab tremfya plaque psoriasis il-2')
+2026-05-31 09:27:44 | INFO     | src.retrieval | Retrieved 34 chunks (12280 chars) for brand=TREMFYA (large=False)
+2026-05-31 09:27:44 | INFO     | src.extractor | Group 'step_therapy': 34 → 9 chunks | 7258 chars | model=llama-3.3-70b-versatile
+2026-05-31 09:27:44 | INFO     | src.extractor | Group 'step_therapy' prompt: system≈3659 tok (cached), user≈1900 tok, max_tokens=600, total≈6159
+2026-05-31 09:27:45 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-31 09:27:45 | INFO     | src.groq_client | Groq [extraction_step_therapy | 3.3 | 176207-4867884.pdf/TREMFYA] → 5468 tokens in 0.99s (attempt 1)
+2026-05-31 09:27:45 | INFO     | src.extractor | Group 'step_therapy' extracted 4 fields
+2026-05-31 09:27:45 | INFO     | src.extractor | Group 'lookups': 34 → 17 chunks | 11448 chars | model=llama-3.3-70b-versatile
+2026-05-31 09:27:45 | INFO     | src.extractor | Group 'lookups' prompt: system≈3561 tok (cached), user≈2967 tok, max_tokens=700, total≈7228
+2026-05-31 09:27:45 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-31 09:27:45 | INFO     | groq._base_client | Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+2026-05-31 09:27:49 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-31 09:27:49 | INFO     | src.groq_client | Groq [extraction_lookups | 3.3 | 176207-4867884.pdf/TREMFYA] → 6082 tokens in 3.87s (attempt 1)
+2026-05-31 09:27:49 | INFO     | src.extractor | Group 'lookups' extracted 8 fields
+2026-05-31 09:27:49 | INFO     | src.debug_logger | [176207-4867884.pdf | TREMFYA] Debug artifacts → /content/submission-build/intermediate_outputs/debug/176207-4867884/TREMFYA
+2026-05-31 09:27:49 | INFO     | src.pipeline |   ✓ 176207-4867884.pdf | TREMFYA → Access Score = 75
+2026-05-31 09:27:54 | INFO     | src.pdf_parser | 282478-5009832.pdf: 7 pages, 10815 chars
+2026-05-31 09:27:54 | INFO     | src.pdf_parser | 282478-5009832.pdf: extracted 1 H1 headings (body_size=11.5, h1_threshold=14.4)
+2026-05-31 09:27:54 | INFO     | src.pipeline | Processing: 282478-5009832.pdf | TREMFYA
+2026-05-31 09:27:54 | INFO     | src.retrieval | Retrieval: brand=TREMFYA | chunks=31 | large=False | top_k=10/5
+2026-05-31 09:27:54 | INFO     | src.retrieval | Manual anchor: page 4 (kw: 'guselkumab tremfya plaque psoriasis il-2')
+2026-05-31 09:27:54 | INFO     | src.retrieval | Retrieved 24 chunks (10278 chars) for brand=TREMFYA (large=False)
+2026-05-31 09:27:54 | INFO     | src.extractor | Group 'step_therapy': 24 → 11 chunks | 6640 chars | model=llama-3.3-70b-versatile
+2026-05-31 09:27:54 | INFO     | src.extractor | Group 'step_therapy' prompt: system≈3659 tok (cached), user≈1746 tok, max_tokens=600, total≈6005
+2026-05-31 09:27:54 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-31 09:27:54 | INFO     | groq._base_client | Retrying request to /openai/v1/chat/completions in 24.000000 seconds
+2026-05-31 09:28:19 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-31 09:28:19 | INFO     | src.groq_client | Groq [extraction_step_therapy | 3.3 | 282478-5009832.pdf/TREMFYA] → 5314 tokens in 24.92s (attempt 1)
+2026-05-31 09:28:19 | INFO     | src.extractor | Group 'step_therapy' extracted 4 fields
+2026-05-31 09:28:19 | INFO     | src.extractor | Group 'lookups': 24 → 14 chunks | 8836 chars | model=llama-3.3-70b-versatile
+2026-05-31 09:28:19 | INFO     | src.extractor | Group 'lookups' prompt: system≈3561 tok (cached), user≈2314 tok, max_tokens=700, total≈6575
+2026-05-31 09:28:19 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-31 09:28:19 | INFO     | groq._base_client | Retrying request to /openai/v1/chat/completions in 30.000000 seconds
+2026-05-31 09:28:50 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-31 09:28:50 | INFO     | src.groq_client | Groq [extraction_lookups | 3.3 | 282478-5009832.pdf/TREMFYA] → 5504 tokens in 30.75s (attempt 1)
+2026-05-31 09:28:50 | INFO     | src.extractor | Group 'lookups' extracted 8 fields
+2026-05-31 09:28:50 | INFO     | src.debug_logger | [282478-5009832.pdf | TREMFYA] Debug artifacts → /content/submission-build/intermediate_outputs/debug/282478-5009832/TREMFYA
+2026-05-31 09:28:50 | INFO     | src.pipeline |   ✓ 282478-5009832.pdf | TREMFYA → Access Score = 75
+2026-05-31 09:28:54 | INFO     | src.pdf_parser | 325611-4784675.pdf: 7 pages, 9664 chars
+2026-05-31 09:28:54 | INFO     | src.pdf_parser | 325611-4784675.pdf: extracted 1 H1 headings (body_size=11.5, h1_threshold=14.4)
+2026-05-31 09:28:54 | INFO     | src.pipeline | Processing: 325611-4784675.pdf | TREMFYA
+2026-05-31 09:28:54 | INFO     | src.retrieval | Retrieval: brand=TREMFYA | chunks=27 | large=False | top_k=10/5
+2026-05-31 09:28:54 | INFO     | src.retrieval | Manual anchor: page 4 (kw: 'guselkumab tremfya plaque psoriasis il-2')
+2026-05-31 09:28:54 | INFO     | src.retrieval | Retrieved 19 chunks (8357 chars) for brand=TREMFYA (large=False)
+2026-05-31 09:28:54 | INFO     | src.extractor | Group 'step_therapy': 19 → 10 chunks | 5392 chars | model=llama-3.3-70b-versatile
+2026-05-31 09:28:54 | INFO     | src.extractor | Group 'step_therapy' prompt: system≈3659 tok (cached), user≈1434 tok, max_tokens=600, total≈5693
+2026-05-31 09:28:54 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-31 09:28:54 | INFO     | groq._base_client | Retrying request to /openai/v1/chat/completions in 19.000000 seconds
+2026-05-31 09:29:14 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-31 09:29:14 | INFO     | src.groq_client | Groq [extraction_step_therapy | 3.3 | 325611-4784675.pdf/TREMFYA] → 5066 tokens in 19.88s (attempt 1)
+2026-05-31 09:29:14 | INFO     | src.extractor | Group 'step_therapy' extracted 4 fields
+2026-05-31 09:29:14 | INFO     | src.extractor | Group 'lookups': 19 → 14 chunks | 8548 chars | model=llama-3.3-70b-versatile
+2026-05-31 09:29:14 | INFO     | src.extractor | Group 'lookups' prompt: system≈3561 tok (cached), user≈2242 tok, max_tokens=700, total≈6503
+2026-05-31 09:29:14 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-31 09:29:14 | WARNING  | src.groq_client | Groq rate limit (attempt 1/3). Waiting 6s…
+2026-05-31 09:29:20 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-31 09:29:20 | WARNING  | src.groq_client | Groq rate limit (attempt 2/3). Waiting 12s…
+2026-05-31 09:29:33 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-31 09:29:33 | WARNING  | src.groq_client | Groq rate limit (attempt 3/3). Waiting 24s…
+2026-05-31 09:29:33 | INFO     | src.debug_logger | [325611-4784675.pdf | TREMFYA] Debug artifacts → /content/submission-build/intermediate_outputs/debug/325611-4784675/TREMFYA
+2026-05-31 09:29:33 | ERROR    | src.pipeline | Error processing 325611-4784675.pdf | TREMFYA: Groq call failed after 3 attempts. Last error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kswnwk65fjmryc1v7zwb9504` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98965, Requested 6107. Please try again in 1h13m2.208s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/content/submission-build/src/pipeline.py", line 294, in _process_manifest_rows
+    raw_extracted = extract_row(filename, brand, evidence, settings, groq)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/submission-build/src/extractor.py", line 77, in extract_row
+    extracted = _extract_grouped(
+                ^^^^^^^^^^^^^^^^^
+  File "/content/submission-build/src/extractor.py", line 156, in _extract_grouped
+    raw = groq_client.complete(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/content/submission-build/src/groq_client.py", line 166, in complete
+    raise RuntimeError(
+RuntimeError: Groq call failed after 3 attempts. Last error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kswnwk65fjmryc1v7zwb9504` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98965, Requested 6107. Please try again in 1h13m2.208s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-05-31 09:29:33 | WARNING  | src.pipeline | Error row written for 325611-4784675.pdf | TREMFYA: Groq call failed after 3 attempts. Last error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kswnwk65fjmryc1v7zwb9504` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98965, Requested 6107. Please try again in 1h13m2.208s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-05-31 09:29:37 | INFO     | src.pdf_parser | 337814-4985370.pdf: 3 pages, 7818 chars
+2026-05-31 09:29:37 | INFO     | src.pdf_parser | 337814-4985370.pdf: extracted 14 H1 headings (body_size=10.0, h1_threshold=12.5)
+2026-05-31 09:29:37 | INFO     | src.pipeline | Processing: 337814-4985370.pdf | STELARA
+2026-05-31 09:29:37 | INFO     | src.retrieval | Retrieval: brand=STELARA | chunks=21 | large=False | top_k=10/5
+2026-05-31 09:29:37 | INFO     | src.retrieval | Manual anchor: page 1 (kw: 'ustekinumab stelara plaque psoriasis il-')
+2026-05-31 09:29:37 | INFO     | src.retrieval | Retrieved 8 chunks (7491 chars) for brand=STELARA (large=False)
+2026-05-31 09:29:37 | INFO     | src.extractor | Group 'step_therapy': 8 → 8 chunks | 8182 chars | model=llama-3.3-70b-versatile
+2026-05-31 09:29:37 | INFO     | src.extractor | Group 'step_therapy' prompt: system≈3659 tok (cached), user≈2131 tok, max_tokens=600, total≈6390
+2026-05-31 09:29:37 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-31 09:29:37 | WARNING  | src.groq_client | Groq rate limit (attempt 1/3). Waiting 6s…
+2026-05-31 09:29:43 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-31 09:29:43 | WARNING  | src.groq_client | Groq rate limit (attempt 2/3). Waiting 12s…
+2026-05-31 09:29:55 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-31 09:29:55 | WARNING  | src.groq_client | Groq rate limit (attempt 3/3). Waiting 24s…
+2026-05-31 09:29:55 | INFO     | src.debug_logger | [337814-4985370.pdf | STELARA] Debug artifacts → /content/submission-build/intermediate_outputs/debug/337814-4985370/STELARA
+2026-05-31 09:29:55 | ERROR    | src.pipeline | Error processing 337814-4985370.pdf | STELARA: Groq call failed after 3 attempts. Last error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kswnwk65fjmryc1v7zwb9504` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98939, Requested 5943. Please try again in 1h10m18.048s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/content/submission-build/src/pipeline.py", line 294, in _process_manifest_rows
+    raw_extracted = extract_row(filename, brand, evidence, settings, groq)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/submission-build/src/extractor.py", line 77, in extract_row
+    extracted = _extract_grouped(
+                ^^^^^^^^^^^^^^^^^
+  File "/content/submission-build/src/extractor.py", line 156, in _extract_grouped
+    raw = groq_client.complete(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/content/submission-build/src/groq_client.py", line 166, in complete
+    raise RuntimeError(
+RuntimeError: Groq call failed after 3 attempts. Last error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kswnwk65fjmryc1v7zwb9504` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98939, Requested 5943. Please try again in 1h10m18.048s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-05-31 09:29:55 | WARNING  | src.pipeline | Error row written for 337814-4985370.pdf | STELARA: Groq call failed after 3 attempts. Last error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kswnwk65fjmryc1v7zwb9504` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98939, Requested 5943. Please try again in 1h10m18.048s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-05-31 09:29:55 | INFO     | src.pipeline | Processing: 337814-4985370.pdf | TREMFYA
+2026-05-31 09:29:55 | INFO     | src.retrieval | Retrieval: brand=TREMFYA | chunks=21 | large=False | top_k=10/5
+2026-05-31 09:29:55 | INFO     | src.retrieval | Manual anchor: page 1 (kw: 'guselkumab tremfya plaque psoriasis il-2')
+2026-05-31 09:29:55 | INFO     | src.retrieval | Retrieved 8 chunks (7491 chars) for brand=TREMFYA (large=False)
+2026-05-31 09:29:55 | INFO     | src.extractor | Group 'step_therapy': 8 → 8 chunks | 8182 chars | model=llama-3.3-70b-versatile
+2026-05-31 09:29:55 | INFO     | src.extractor | Group 'step_therapy' prompt: system≈3659 tok (cached), user≈2131 tok, max_tokens=600, total≈6390
+2026-05-31 09:29:55 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-31 09:29:55 | WARNING  | src.groq_client | Groq rate limit (attempt 1/3). Waiting 6s…
+2026-05-31 09:30:01 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-31 09:30:01 | WARNING  | src.groq_client | Groq rate limit (attempt 2/3). Waiting 12s…
+2026-05-31 09:30:13 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-31 09:30:13 | WARNING  | src.groq_client | Groq rate limit (attempt 3/3). Waiting 24s…
+2026-05-31 09:30:13 | INFO     | src.debug_logger | [337814-4985370.pdf | TREMFYA] Debug artifacts → /content/submission-build/intermediate_outputs/debug/337814-4985370/TREMFYA
+2026-05-31 09:30:13 | ERROR    | src.pipeline | Error processing 337814-4985370.pdf | TREMFYA: Groq call failed after 3 attempts. Last error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kswnwk65fjmryc1v7zwb9504` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98918, Requested 5892. Please try again in 1h9m15.84s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/content/submission-build/src/pipeline.py", line 294, in _process_manifest_rows
+    raw_extracted = extract_row(filename, brand, evidence, settings, groq)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/submission-build/src/extractor.py", line 77, in extract_row
+    extracted = _extract_grouped(
+                ^^^^^^^^^^^^^^^^^
+  File "/content/submission-build/src/extractor.py", line 156, in _extract_grouped
+    raw = groq_client.complete(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/content/submission-build/src/groq_client.py", line 166, in complete
+    raise RuntimeError(
+RuntimeError: Groq call failed after 3 attempts. Last error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kswnwk65fjmryc1v7zwb9504` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98918, Requested 5892. Please try again in 1h9m15.84s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-05-31 09:30:13 | WARNING  | src.pipeline | Error row written for 337814-4985370.pdf | TREMFYA: Groq call failed after 3 attempts. Last error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kswnwk65fjmryc1v7zwb9504` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98918, Requested 5892. Please try again in 1h9m15.84s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-05-31 09:30:14 | INFO     | src.pdf_parser | 361486-4654549.pdf: 2 pages, 3219 chars
+2026-05-31 09:30:14 | INFO     | src.pdf_parser | 361486-4654549.pdf: extracted 2 H1 headings (body_size=11.2, h1_threshold=14.0)
+2026-05-31 09:30:14 | INFO     | src.pipeline | Processing: 361486-4654549.pdf | TREMFYA
+2026-05-31 09:30:14 | INFO     | src.retrieval | Retrieval: brand=TREMFYA | chunks=16 | large=False | top_k=10/5
+2026-05-31 09:30:14 | INFO     | src.retrieval | Manual anchor: page 1 (kw: 'guselkumab tremfya plaque psoriasis il-2')
+2026-05-31 09:30:14 | INFO     | src.retrieval | Retrieved 12 chunks (3135 chars) for brand=TREMFYA (large=False)
+2026-05-31 09:30:14 | INFO     | src.extractor | Group 'step_therapy': 12 → 12 chunks | 4297 chars | model=llama-3.3-70b-versatile
+2026-05-31 09:30:14 | INFO     | src.extractor | Group 'step_therapy' prompt: system≈3659 tok (cached), user≈1160 tok, max_tokens=600, total≈5419
+2026-05-31 09:30:14 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-31 09:30:14 | WARNING  | src.groq_client | Groq rate limit (attempt 1/3). Waiting 6s…
+2026-05-31 09:30:20 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-31 09:30:20 | WARNING  | src.groq_client | Groq rate limit (attempt 2/3). Waiting 12s…
+2026-05-31 09:30:33 | INFO     | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-31 09:30:33 | WARNING  | src.groq_client | Groq rate limit (attempt 3/3). Waiting 24s…
+2026-05-31 09:30:33 | INFO     | src.debug_logger | [361486-4654549.pdf | TREMFYA] Debug artifacts → /content/submission-build/intermediate_outputs/debug/361486-4654549/TREMFYA
+2026-05-31 09:30:33 | ERROR    | src.pipeline | Error processing 361486-4654549.pdf | TREMFYA: Groq call failed after 3 attempts. Last error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kswnwk65fjmryc1v7zwb9504` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98896, Requested 5141. Please try again in 58m7.968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/content/submission-build/src/pipeline.py", line 294, in _process_manifest_rows
+    raw_extracted = extract_row(filename, brand, evidence, settings, groq)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/submission-build/src/extractor.py", line 77, in extract_row
+    extracted = _extract_grouped(
+                ^^^^^^^^^^^^^^^^^
+  File "/content/submission-build/src/extractor.py", line 156, in _extract_grouped
+    raw = groq_client.complete(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/content/submission-build/src/groq_client.py", line 166, in complete
+    raise RuntimeError(
+RuntimeError: Groq call failed after 3 attempts. Last error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kswnwk65fjmryc1v7zwb9504` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98896, Requested 5141. Please try again in 58m7.968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-05-31 09:30:33 | WARNING  | src.pipeline | Error row written for 361486-4654549.pdf | TREMFYA: Groq call failed after 3 attempts. Last error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kswnwk65fjmryc1v7zwb9504` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98896, Requested 5141. Please try again in 58m7.968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-05-31 09:30:33 | INFO     | src.io_utils | Result CSV written: /content/submission-build/outputs/result.csv (6 rows)
+2026-05-31 09:30:33 | INFO     | src.io_utils | Result Excel written: /content/submission-build/outputs/result.xlsx (6 rows)
+2026-05-31 09:30:33 | INFO     | src.validator | Output validation: 6 rows, 0 blank cells, 15 columns
+2026-05-31 09:30:33 | INFO     | src.pipeline | === Done. Output → /content/submission-build/outputs/result.csv ===
